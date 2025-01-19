@@ -13,7 +13,7 @@ export class StreamButton3 extends SingletonAction<StreamSettings> {
     ): Promise<void> {
         const { page } = await streamDeck.settings.getGlobalSettings();
 
-        const index = 3 + Number(page) * 10;
+        const index = 3 + (Number(page) - 1) * 10;
 
         const streamData = await readStreamDataFromJson(index);
 

@@ -17,7 +17,10 @@ export class PageUpButton extends SingletonAction<JsonObject> {
     override async onKeyDown(ev: KeyDownEvent<JsonObject>): Promise<void> {
         const { page } = await streamDeck.settings.getGlobalSettings();
 
-        streamDeck.settings.setGlobalSettings({ page: Number(page) + 1 });
+        streamDeck.settings.setGlobalSettings({
+            wasPageUp: true,
+            page: Number(page) + 1,
+        });
 
         streamDeck.profiles.switchToProfile(ev.action.device.id, undefined);
     }

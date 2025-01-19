@@ -17,6 +17,7 @@ import { StreamButton10 } from "./actions/stream-button-10";
 import { StreamButton11 } from "./actions/stream-button-11";
 import { StreamButton12 } from "./actions/stream-button-12";
 import { PageUpButton } from "./actions/page-up-button";
+import { PageDownButton } from "./actions/page-down-button";
 
 dotenv.config();
 
@@ -28,6 +29,7 @@ streamDeck.actions.registerAction(new HoloFolder());
 streamDeck.actions.registerAction(new BackButton());
 streamDeck.actions.registerAction(new RefreshButton());
 streamDeck.actions.registerAction(new PageUpButton());
+streamDeck.actions.registerAction(new PageDownButton());
 streamDeck.actions.registerAction(new StreamButton0());
 streamDeck.actions.registerAction(new StreamButton1());
 streamDeck.actions.registerAction(new StreamButton2());

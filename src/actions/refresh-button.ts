@@ -16,7 +16,7 @@ export class RefreshButton extends SingletonAction<JsonObject> {
     }
 
     override async onKeyDown(ev: KeyDownEvent<JsonObject>): Promise<void> {
-        streamDeck.settings.setGlobalSettings({ isRefresh: true, page: 0 });
+        streamDeck.settings.setGlobalSettings({ isRefresh: true, page: 1 });
 
         await fetchLiveStreams();
 

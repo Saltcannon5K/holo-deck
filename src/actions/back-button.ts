@@ -15,7 +15,7 @@ export class BackButton extends SingletonAction<JsonObject> {
     }
 
     override onKeyDown(ev: KeyDownEvent<JsonObject>) {
-        streamDeck.settings.setGlobalSettings({ page: 0 });
+        streamDeck.settings.setGlobalSettings({ page: 1 });
 
         streamDeck.profiles.switchToProfile(ev.action.device.id, undefined);
     }
