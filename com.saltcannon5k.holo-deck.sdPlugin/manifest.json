@@ -43,6 +43,19 @@
             ]
         },
         {
+            "Name": "Page Up Button",
+            "UUID": "com.saltcannon5k.holo-deck.page-up-button",
+            "Icon": "imgs/actions/counter/icon",
+            "Tooltip": "wip",
+            "Controllers": ["Keypad"],
+            "States": [
+                {
+                    "Image": "imgs/actions/counter/key",
+                    "TitleAlignment": "middle"
+                }
+            ]
+        },
+        {
             "Name": "Stream Button 0",
             "UUID": "com.saltcannon5k.holo-deck.stream-button-0",
             "Icon": "imgs/actions/counter/icon",

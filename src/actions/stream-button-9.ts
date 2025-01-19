@@ -11,17 +11,19 @@ export class StreamButton9 extends SingletonAction<StreamSettings> {
     override async onWillAppear(
         ev: WillAppearEvent<StreamSettings>
     ): Promise<void> {
-        ev.action.setSettings({ id: null });
+        const { page } = await streamDeck.settings.getGlobalSettings();
 
-        const streamData = await readStreamDataFromJson(9);
+        const index = 9 + Number(page) * 10;
+
+        const streamData = await readStreamDataFromJson(index);
 
         const id = streamData?.id ?? null;
 
-        if (id) {
-            ev.action.setSettings({ id });
-        }
+        ev.action.setSettings({ id: id ?? null });
 
-        return ev.action.setImage(streamData?.processedPhoto ?? "");
+        ev.action.setTitle(id ? "" : index.toString());
+
+        ev.action.setImage(streamData?.processedPhoto ?? "");
     }
 
     override onKeyDown(ev: KeyDownEvent<StreamSettings>): void {

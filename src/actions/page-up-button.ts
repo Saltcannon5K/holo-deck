@@ -5,20 +5,19 @@ import streamDeck, {
     SingletonAction,
     WillAppearEvent,
 } from "@elgato/streamdeck";
-import { fetchLiveStreams } from "../holodex-api/fetch-live-streams";
 
-@action({ UUID: "com.saltcannon5k.holo-deck.refresh-button" })
-export class RefreshButton extends SingletonAction<JsonObject> {
+@action({ UUID: "com.saltcannon5k.holo-deck.page-up-button" })
+export class PageUpButton extends SingletonAction<JsonObject> {
     override onWillAppear(
         ev: WillAppearEvent<JsonObject>
     ): Promise<void> | void {
-        return ev.action.setTitle("REFRESH");
+        return ev.action.setTitle("Page Up");
     }
 
     override async onKeyDown(ev: KeyDownEvent<JsonObject>): Promise<void> {
-        streamDeck.settings.setGlobalSettings({ isRefresh: true, page: 0 });
+        const { page } = await streamDeck.settings.getGlobalSettings();
 
-        await fetchLiveStreams();
+        streamDeck.settings.setGlobalSettings({ page: Number(page) + 1 });
 
         streamDeck.profiles.switchToProfile(ev.action.device.id, undefined);
     }
