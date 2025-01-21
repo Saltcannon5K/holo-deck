@@ -3,7 +3,7 @@ import { holodexApiConnection } from "./holodex-api-connection";
 import axios from "axios";
 import fs from "fs";
 
-export async function fetchLiveStreams(): Promise<void> {
+export async function fetchLiveStreams(isRefresh = false): Promise<void> {
     try {
         const response = await holodexApiConnection.get(
             "/live?status=live&org=Hololive&order=desc"
@@ -16,6 +16,12 @@ export async function fetchLiveStreams(): Promise<void> {
                 stream["channel"]["org"] === "Hololive" &&
                 stream["topic_id"] !== "membersonly"
             );
+        });
+
+        streamDeck.settings.setGlobalSettings({
+            streamTotal: holoFilteredData.length,
+            page: 1,
+            isRefresh,
         });
 
         fs.writeFileSync(

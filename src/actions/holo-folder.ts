@@ -12,13 +12,14 @@ export class HoloFolder extends SingletonAction<JsonObject> {
     override async onWillAppear(
         ev: WillAppearEvent<JsonObject>
     ): Promise<void> {
-        const { isRefresh, page, wasPageUp, wasPageDown } =
+        const { isRefresh, page, wasPageUp, wasPageDown, streamTotal } =
             await streamDeck.settings.getGlobalSettings();
 
         if (isRefresh) {
             streamDeck.settings.setGlobalSettings({
                 isRefresh: false,
                 page: 1,
+                streamTotal,
             });
 
             return streamDeck.profiles.switchToProfile(
@@ -30,6 +31,7 @@ export class HoloFolder extends SingletonAction<JsonObject> {
         if (wasPageDown) {
             streamDeck.settings.setGlobalSettings({
                 page,
+                streamTotal,
             });
             streamDeck.profiles.switchToProfile(
                 ev.action.device.id,
@@ -41,6 +43,7 @@ export class HoloFolder extends SingletonAction<JsonObject> {
         if (wasPageUp) {
             streamDeck.settings.setGlobalSettings({
                 page,
+                streamTotal,
             });
             streamDeck.profiles.switchToProfile(
                 ev.action.device.id,
@@ -49,13 +52,13 @@ export class HoloFolder extends SingletonAction<JsonObject> {
             return;
         }
 
-        streamDeck.settings.setGlobalSettings({ page: 1 });
-
         return ev.action.setTitle(`Holo Deck`);
     }
 
     override async onKeyDown(ev: KeyDownEvent<JsonObject>): Promise<void> {
         await fetchLiveStreams();
+
+        //streamDeck.settings.setGlobalSettings({ page: 1 });
 
         streamDeck.profiles.switchToProfile(
             ev.action.device.id,
