@@ -13,9 +13,6 @@ import { StreamButton6 } from "./actions/stream-button-6";
 import { StreamButton7 } from "./actions/stream-button-7";
 import { StreamButton8 } from "./actions/stream-button-8";
 import { StreamButton9 } from "./actions/stream-button-9";
-import { StreamButton10 } from "./actions/stream-button-10";
-import { StreamButton11 } from "./actions/stream-button-11";
-import { StreamButton12 } from "./actions/stream-button-12";
 import { PageUpButton } from "./actions/page-up-button";
 import { PageDownButton } from "./actions/page-down-button";
 import { PageIndicator } from "./actions/page-indicator";
@@ -42,9 +39,6 @@ streamDeck.actions.registerAction(new StreamButton6());
 streamDeck.actions.registerAction(new StreamButton7());
 streamDeck.actions.registerAction(new StreamButton8());
 streamDeck.actions.registerAction(new StreamButton9());
-streamDeck.actions.registerAction(new StreamButton10());
-streamDeck.actions.registerAction(new StreamButton11());
-streamDeck.actions.registerAction(new StreamButton12());
 
 // Finally, connect to the Stream Deck.
 streamDeck.connect();

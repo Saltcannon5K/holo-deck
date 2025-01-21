@@ -21,8 +21,6 @@ export class StreamButton8 extends SingletonAction<StreamSettings> {
 
         ev.action.setSettings({ id: id ?? null });
 
-        ev.action.setTitle(id ? "" : index.toString());
-
         ev.action.setImage(streamData?.processedPhoto ?? "");
     }
 

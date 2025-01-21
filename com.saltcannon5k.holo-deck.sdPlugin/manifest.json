@@ -22,6 +22,7 @@
             "Icon": "imgs/actions/counter/icon",
             "Tooltip": "wip",
             "Controllers": ["Keypad"],
+            "VisibleInActionsList": false,
             "States": [
                 {
                     "Image": "imgs/actions/counter/key",
@@ -35,6 +36,7 @@
             "Icon": "imgs/actions/counter/icon",
             "Tooltip": "wip",
             "Controllers": ["Keypad"],
+            "VisibleInActionsList": false,
             "States": [
                 {
                     "Image": "imgs/actions/counter/key",
@@ -48,6 +50,7 @@
             "Icon": "imgs/actions/counter/icon",
             "Tooltip": "wip",
             "Controllers": ["Keypad"],
+            "VisibleInActionsList": false,
             "States": [
                 {
                     "Image": "imgs/actions/counter/key",
@@ -61,6 +64,7 @@
             "Icon": "imgs/actions/counter/icon",
             "Tooltip": "wip",
             "Controllers": ["Keypad"],
+            "VisibleInActionsList": false,
             "States": [
                 {
                     "Image": "imgs/actions/counter/key",
@@ -74,6 +78,7 @@
             "Icon": "imgs/actions/counter/icon",
             "Tooltip": "wip",
             "Controllers": ["Keypad"],
+            "VisibleInActionsList": false,
             "States": [
                 {
                     "Image": "imgs/actions/counter/key",
@@ -87,9 +92,10 @@
             "Icon": "imgs/actions/counter/icon",
             "Tooltip": "wip",
             "Controllers": ["Keypad"],
+            "VisibleInActionsList": false,
             "States": [
                 {
-                    "Image": "imgs/actions/counter/key",
+                    "Image": "",
                     "TitleAlignment": "middle"
                 }
             ]
@@ -100,9 +106,10 @@
             "Icon": "imgs/actions/counter/icon",
             "Tooltip": "wip",
             "Controllers": ["Keypad"],
+            "VisibleInActionsList": false,
             "States": [
                 {
-                    "Image": "imgs/actions/counter/key",
+                    "Image": "",
                     "TitleAlignment": "middle"
                 }
             ]
@@ -113,9 +120,10 @@
             "Icon": "imgs/actions/counter/icon",
             "Tooltip": "wip",
             "Controllers": ["Keypad"],
+            "VisibleInActionsList": false,
             "States": [
                 {
-                    "Image": "imgs/actions/counter/key",
+                    "Image": "",
                     "TitleAlignment": "middle"
                 }
             ]
@@ -126,9 +134,10 @@
             "Icon": "imgs/actions/counter/icon",
             "Tooltip": "wip",
             "Controllers": ["Keypad"],
+            "VisibleInActionsList": false,
             "States": [
                 {
-                    "Image": "imgs/actions/counter/key",
+                    "Image": "",
                     "TitleAlignment": "middle"
                 }
             ]
@@ -139,9 +148,10 @@
             "Icon": "imgs/actions/counter/icon",
             "Tooltip": "wip",
             "Controllers": ["Keypad"],
+            "VisibleInActionsList": false,
             "States": [
                 {
-                    "Image": "imgs/actions/counter/key",
+                    "Image": "",
                     "TitleAlignment": "middle"
                 }
             ]
@@ -152,9 +162,10 @@
             "Icon": "imgs/actions/counter/icon",
             "Tooltip": "wip",
             "Controllers": ["Keypad"],
+            "VisibleInActionsList": false,
             "States": [
                 {
-                    "Image": "imgs/actions/counter/key",
+                    "Image": "",
                     "TitleAlignment": "middle"
                 }
             ]
@@ -165,9 +176,10 @@
             "Icon": "imgs/actions/counter/icon",
             "Tooltip": "wip",
             "Controllers": ["Keypad"],
+            "VisibleInActionsList": false,
             "States": [
                 {
-                    "Image": "imgs/actions/counter/key",
+                    "Image": "",
                     "TitleAlignment": "middle"
                 }
             ]
@@ -178,9 +190,10 @@
             "Icon": "imgs/actions/counter/icon",
             "Tooltip": "wip",
             "Controllers": ["Keypad"],
+            "VisibleInActionsList": false,
             "States": [
                 {
-                    "Image": "imgs/actions/counter/key",
+                    "Image": "",
                     "TitleAlignment": "middle"
                 }
             ]
@@ -191,9 +204,10 @@
             "Icon": "imgs/actions/counter/icon",
             "Tooltip": "wip",
             "Controllers": ["Keypad"],
+            "VisibleInActionsList": false,
             "States": [
                 {
-                    "Image": "imgs/actions/counter/key",
+                    "Image": "",
                     "TitleAlignment": "middle"
                 }
             ]
@@ -204,48 +218,10 @@
             "Icon": "imgs/actions/counter/icon",
             "Tooltip": "wip",
             "Controllers": ["Keypad"],
+            "VisibleInActionsList": false,
             "States": [
                 {
-                    "Image": "imgs/actions/counter/key",
-                    "TitleAlignment": "middle"
-                }
-            ]
-        },
-        {
-            "Name": "Stream Button 10",
-            "UUID": "com.saltcannon5k.holo-deck.stream-button-10",
-            "Icon": "imgs/actions/counter/icon",
-            "Tooltip": "wip",
-            "Controllers": ["Keypad"],
-            "States": [
-                {
-                    "Image": "imgs/actions/counter/key",
-                    "TitleAlignment": "middle"
-                }
-            ]
-        },
-        {
-            "Name": "Stream Button 11",
-            "UUID": "com.saltcannon5k.holo-deck.stream-button-11",
-            "Icon": "imgs/actions/counter/icon",
-            "Tooltip": "wip",
-            "Controllers": ["Keypad"],
-            "States": [
-                {
-                    "Image": "imgs/actions/counter/key",
-                    "TitleAlignment": "middle"
-                }
-            ]
-        },
-        {
-            "Name": "Stream Button 12",
-            "UUID": "com.saltcannon5k.holo-deck.stream-button-12",
-            "Icon": "imgs/actions/counter/icon",
-            "Tooltip": "wip",
-            "Controllers": ["Keypad"],
-            "States": [
-                {
-                    "Image": "imgs/actions/counter/key",
+                    "Image": "",
                     "TitleAlignment": "middle"
                 }
             ]
