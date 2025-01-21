@@ -10,8 +10,11 @@ export class PageIndicator extends SingletonAction<JsonObject> {
     override async onWillAppear(
         ev: WillAppearEvent<JsonObject>
     ): Promise<void> {
-        const { page } = await streamDeck.settings.getGlobalSettings();
+        const { page, streamTotal } =
+            await streamDeck.settings.getGlobalSettings();
 
-        return ev.action.setTitle(page?.toString() ?? "");
+        const maxPage = Math.ceil(Number(streamTotal) / 10);
+
+        return ev.action.setTitle(page ? `${page} of ${maxPage}` : "");
     }
 }
