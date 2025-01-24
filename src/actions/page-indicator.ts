@@ -15,6 +15,8 @@ export class PageIndicator extends SingletonAction<JsonObject> {
 
         const maxPage = Math.ceil(Number(streamTotal) / 10);
 
-        return ev.action.setTitle(page ? `${page} of ${maxPage}` : "");
+        if (streamTotal)
+            ev.action.setTitle(page ? `${page} of ${maxPage}` : "Page\nError");
+        else ev.action.setTitle("No\nstreams...");
     }
 }
