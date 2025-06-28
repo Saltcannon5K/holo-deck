@@ -5,8 +5,15 @@ import fs from "fs";
 
 export async function fetchLiveStreams(isRefresh = false): Promise<void> {
     try {
+        const apiKeyData = fs.readFileSync(`./holodex-api-key.json`, "utf-8");
+
+        const { holodexApiKey } = JSON.parse(apiKeyData);
+
         const response = await holodexApiConnection.get(
-            "/live?status=live&org=Hololive&order=desc"
+            "/live?status=live&org=Hololive&order=desc",
+            {
+                headers: { "X-APIKEY": holodexApiKey },
+            }
         );
 
         const data = response.data;
@@ -33,7 +40,18 @@ export async function fetchLiveStreams(isRefresh = false): Promise<void> {
         streamDeck.logger.info("Data written to json");
     } catch (error) {
         if (axios.isAxiosError(error)) {
-            streamDeck.logger.error(error.message);
+            streamDeck.logger.error(`AXIOS ERROR: ${error.message}`);
+        } else {
+            streamDeck.logger.error(`CATCH ALL ERROR: ${error}`);
         }
+
+        fs.writeFileSync(`./holodex-data.json`, JSON.stringify([{}]), "utf-8");
+
+        streamDeck.settings.setGlobalSettings({
+            isApiError: true,
+            page: 1,
+            streamTotal: 0,
+            isRefresh,
+        });
     }
 }

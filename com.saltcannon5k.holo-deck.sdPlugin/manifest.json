@@ -14,7 +14,8 @@
                     "Image": "imgs/actions/counter/key",
                     "TitleAlignment": "middle"
                 }
-            ]
+            ],
+            "PropertyInspectorPath": "ui/holo-folder.html"
         },
         {
             "Name": "Back Button",
