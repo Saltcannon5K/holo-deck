@@ -4,21 +4,40 @@ import streamDeck, {
     KeyDownEvent,
     SingletonAction,
     WillAppearEvent,
+    WillDisappearEvent,
 } from "@elgato/streamdeck";
 import { fetchLiveStreams } from "../holodex-api/fetch-live-streams";
 
 @action({ UUID: "com.saltcannon5k.holo-deck.refresh-button" })
 export class RefreshButton extends SingletonAction<JsonObject> {
+    private timer: NodeJS.Timeout | null = null;
+
     override onWillAppear(
         ev: WillAppearEvent<JsonObject>
     ): Promise<void> | void {
+        this.timer = setInterval(async () => {
+            await fetchLiveStreams(true);
+
+            streamDeck.logger.info("Interval refresh triggered");
+
+            streamDeck.profiles.switchToProfile(ev.action.device.id, undefined);
+        }, 5 * 60 * 1000); // 5 minutes
+
         return ev.action.setTitle("REFRESH");
+    }
+
+    override onWillDisappear(
+        ev: WillDisappearEvent<JsonObject>
+    ): Promise<void> | void {
+        if (this.timer) {
+            clearInterval(this.timer);
+
+            this.timer = null;
+        }
     }
 
     override async onKeyDown(ev: KeyDownEvent<JsonObject>): Promise<void> {
         await fetchLiveStreams(true);
-
-        //streamDeck.settings.setGlobalSettings({ isRefresh: true, page: 1 });
 
         streamDeck.profiles.switchToProfile(ev.action.device.id, undefined);
     }

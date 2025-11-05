@@ -1,263 +1,295 @@
 {
-    "Name": "Holo Deck",
-    "Version": "0.1.0.0",
-    "Author": "Saltcannon5K",
-    "Actions": [
-        {
-            "Name": "Holo Folder",
-            "UUID": "com.saltcannon5k.holo-deck.holo-folder",
-            "Icon": "imgs/actions/counter/icon",
-            "Tooltip": "wip",
-            "Controllers": ["Keypad"],
-            "States": [
-                {
-                    "Image": "imgs/actions/counter/key",
-                    "TitleAlignment": "middle"
-                }
-            ],
-            "PropertyInspectorPath": "ui/holo-folder.html"
-        },
-        {
-            "Name": "Back Button",
-            "UUID": "com.saltcannon5k.holo-deck.back-button",
-            "Icon": "imgs/actions/counter/icon",
-            "Tooltip": "wip",
-            "Controllers": ["Keypad"],
-            "VisibleInActionsList": false,
-            "States": [
-                {
-                    "Image": "imgs/actions/counter/key",
-                    "TitleAlignment": "middle"
-                }
-            ]
-        },
-        {
-            "Name": "Refresh Button",
-            "UUID": "com.saltcannon5k.holo-deck.refresh-button",
-            "Icon": "imgs/actions/counter/icon",
-            "Tooltip": "wip",
-            "Controllers": ["Keypad"],
-            "VisibleInActionsList": false,
-            "States": [
-                {
-                    "Image": "imgs/actions/counter/key",
-                    "TitleAlignment": "middle"
-                }
-            ]
-        },
-        {
-            "Name": "Page Up Button",
-            "UUID": "com.saltcannon5k.holo-deck.page-up-button",
-            "Icon": "imgs/actions/counter/icon",
-            "Tooltip": "wip",
-            "Controllers": ["Keypad"],
-            "VisibleInActionsList": false,
-            "States": [
-                {
-                    "Image": "imgs/actions/counter/key",
-                    "TitleAlignment": "middle"
-                }
-            ]
-        },
-        {
-            "Name": "Page Down Button",
-            "UUID": "com.saltcannon5k.holo-deck.page-down-button",
-            "Icon": "imgs/actions/counter/icon",
-            "Tooltip": "wip",
-            "Controllers": ["Keypad"],
-            "VisibleInActionsList": false,
-            "States": [
-                {
-                    "Image": "imgs/actions/counter/key",
-                    "TitleAlignment": "middle"
-                }
-            ]
-        },
-        {
-            "Name": "Page Indicator",
-            "UUID": "com.saltcannon5k.holo-deck.page-indicator",
-            "Icon": "imgs/actions/counter/icon",
-            "Tooltip": "wip",
-            "Controllers": ["Keypad"],
-            "VisibleInActionsList": false,
-            "States": [
-                {
-                    "Image": "imgs/actions/counter/key",
-                    "TitleAlignment": "middle"
-                }
-            ]
-        },
-        {
-            "Name": "Stream Button 0",
-            "UUID": "com.saltcannon5k.holo-deck.stream-button-0",
-            "Icon": "imgs/actions/counter/icon",
-            "Tooltip": "wip",
-            "Controllers": ["Keypad"],
-            "VisibleInActionsList": false,
-            "States": [
-                {
-                    "Image": "imgs/actions/counter/key",
-                    "TitleAlignment": "middle"
-                }
-            ]
-        },
-        {
-            "Name": "Stream Button 1",
-            "UUID": "com.saltcannon5k.holo-deck.stream-button-1",
-            "Icon": "imgs/actions/counter/icon",
-            "Tooltip": "wip",
-            "Controllers": ["Keypad"],
-            "VisibleInActionsList": false,
-            "States": [
-                {
-                    "Image": "imgs/actions/counter/key",
-                    "TitleAlignment": "middle"
-                }
-            ]
-        },
-        {
-            "Name": "Stream Button 2",
-            "UUID": "com.saltcannon5k.holo-deck.stream-button-2",
-            "Icon": "imgs/actions/counter/icon",
-            "Tooltip": "wip",
-            "Controllers": ["Keypad"],
-            "VisibleInActionsList": false,
-            "States": [
-                {
-                    "Image": "imgs/actions/counter/key",
-                    "TitleAlignment": "middle"
-                }
-            ]
-        },
-        {
-            "Name": "Stream Button 3",
-            "UUID": "com.saltcannon5k.holo-deck.stream-button-3",
-            "Icon": "imgs/actions/counter/icon",
-            "Tooltip": "wip",
-            "Controllers": ["Keypad"],
-            "VisibleInActionsList": false,
-            "States": [
-                {
-                    "Image": "imgs/actions/counter/key",
-                    "TitleAlignment": "middle"
-                }
-            ]
-        },
-        {
-            "Name": "Stream Button 4",
-            "UUID": "com.saltcannon5k.holo-deck.stream-button-4",
-            "Icon": "imgs/actions/counter/icon",
-            "Tooltip": "wip",
-            "Controllers": ["Keypad"],
-            "VisibleInActionsList": false,
-            "States": [
-                {
-                    "Image": "imgs/actions/counter/key",
-                    "TitleAlignment": "middle"
-                }
-            ]
-        },
-        {
-            "Name": "Stream Button 5",
-            "UUID": "com.saltcannon5k.holo-deck.stream-button-5",
-            "Icon": "imgs/actions/counter/icon",
-            "Tooltip": "wip",
-            "Controllers": ["Keypad"],
-            "VisibleInActionsList": false,
-            "States": [
-                {
-                    "Image": "imgs/actions/counter/key",
-                    "TitleAlignment": "middle"
-                }
-            ]
-        },
-        {
-            "Name": "Stream Button 6",
-            "UUID": "com.saltcannon5k.holo-deck.stream-button-6",
-            "Icon": "imgs/actions/counter/icon",
-            "Tooltip": "wip",
-            "Controllers": ["Keypad"],
-            "VisibleInActionsList": false,
-            "States": [
-                {
-                    "Image": "imgs/actions/counter/key",
-                    "TitleAlignment": "middle"
-                }
-            ]
-        },
-        {
-            "Name": "Stream Button 7",
-            "UUID": "com.saltcannon5k.holo-deck.stream-button-7",
-            "Icon": "imgs/actions/counter/icon",
-            "Tooltip": "wip",
-            "Controllers": ["Keypad"],
-            "VisibleInActionsList": false,
-            "States": [
-                {
-                    "Image": "imgs/actions/counter/key",
-                    "TitleAlignment": "middle"
-                }
-            ]
-        },
-        {
-            "Name": "Stream Button 8",
-            "UUID": "com.saltcannon5k.holo-deck.stream-button-8",
-            "Icon": "imgs/actions/counter/icon",
-            "Tooltip": "wip",
-            "Controllers": ["Keypad"],
-            "VisibleInActionsList": false,
-            "States": [
-                {
-                    "Image": "imgs/actions/counter/key",
-                    "TitleAlignment": "middle"
-                }
-            ]
-        },
-        {
-            "Name": "Stream Button 9",
-            "UUID": "com.saltcannon5k.holo-deck.stream-button-9",
-            "Icon": "imgs/actions/counter/icon",
-            "Tooltip": "wip",
-            "Controllers": ["Keypad"],
-            "VisibleInActionsList": false,
-            "States": [
-                {
-                    "Image": "imgs/actions/counter/key",
-                    "TitleAlignment": "middle"
-                }
-            ]
-        }
-    ],
-    "Category": "Holo Deck",
-    "CategoryIcon": "imgs/plugin/category-icon",
-    "CodePath": "bin/plugin.js",
-    "Description": "All live holo-streams at your fingertips",
-    "Icon": "imgs/plugin/marketplace",
-    "SDKVersion": 2,
-    "Software": {
-        "MinimumVersion": "6.4"
-    },
-    "OS": [
-        {
-            "Platform": "mac",
-            "MinimumVersion": "10.15"
-        },
-        {
-            "Platform": "windows",
-            "MinimumVersion": "10"
-        }
-    ],
-    "Nodejs": {
-        "Version": "20",
-        "Debug": "enabled"
-    },
-    "UUID": "com.saltcannon5k.holo-deck",
-    "Profiles": [
-        {
-            "Name": "holo-folder-profile",
-            "DeviceType": 0,
-            "Readonly": true,
-            "DontAutoSwitchWhenInstalled": true
-        }
-    ]
+	"Name": "Holo Deck",
+	"Version": "0.1.0.0",
+	"Author": "Saltcannon5K",
+	"Actions": [
+		{
+			"Name": "Holo Folder",
+			"UUID": "com.saltcannon5k.holo-deck.holo-folder",
+			"Icon": "imgs/actions/counter/icon",
+			"Tooltip": "wip",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/counter/key",
+					"TitleAlignment": "middle"
+				}
+			],
+			"PropertyInspectorPath": "ui/holo-folder.html"
+		},
+		{
+			"Name": "Back Button",
+			"UUID": "com.saltcannon5k.holo-deck.back-button",
+			"Icon": "imgs/actions/counter/icon",
+			"Tooltip": "wip",
+			"Controllers": [
+				"Keypad"
+			],
+			"VisibleInActionsList": false,
+			"States": [
+				{
+					"Image": "imgs/actions/counter/key",
+					"TitleAlignment": "middle"
+				}
+			]
+		},
+		{
+			"Name": "Refresh Button",
+			"UUID": "com.saltcannon5k.holo-deck.refresh-button",
+			"Icon": "imgs/actions/counter/icon",
+			"Tooltip": "wip",
+			"Controllers": [
+				"Keypad"
+			],
+			"VisibleInActionsList": false,
+			"States": [
+				{
+					"Image": "imgs/actions/counter/key",
+					"TitleAlignment": "middle"
+				}
+			]
+		},
+		{
+			"Name": "Page Up Button",
+			"UUID": "com.saltcannon5k.holo-deck.page-up-button",
+			"Icon": "imgs/actions/counter/icon",
+			"Tooltip": "wip",
+			"Controllers": [
+				"Keypad"
+			],
+			"VisibleInActionsList": false,
+			"States": [
+				{
+					"Image": "imgs/actions/counter/key",
+					"TitleAlignment": "middle"
+				}
+			]
+		},
+		{
+			"Name": "Page Down Button",
+			"UUID": "com.saltcannon5k.holo-deck.page-down-button",
+			"Icon": "imgs/actions/counter/icon",
+			"Tooltip": "wip",
+			"Controllers": [
+				"Keypad"
+			],
+			"VisibleInActionsList": false,
+			"States": [
+				{
+					"Image": "imgs/actions/counter/key",
+					"TitleAlignment": "middle"
+				}
+			]
+		},
+		{
+			"Name": "Page Indicator",
+			"UUID": "com.saltcannon5k.holo-deck.page-indicator",
+			"Icon": "imgs/actions/counter/icon",
+			"Tooltip": "wip",
+			"Controllers": [
+				"Keypad"
+			],
+			"VisibleInActionsList": false,
+			"States": [
+				{
+					"Image": "imgs/actions/counter/key",
+					"TitleAlignment": "middle"
+				}
+			]
+		},
+		{
+			"Name": "Stream Button 0",
+			"UUID": "com.saltcannon5k.holo-deck.stream-button-0",
+			"Icon": "imgs/actions/counter/icon",
+			"Tooltip": "wip",
+			"Controllers": [
+				"Keypad"
+			],
+			"VisibleInActionsList": false,
+			"States": [
+				{
+					"Image": "imgs/actions/counter/key",
+					"TitleAlignment": "middle"
+				}
+			]
+		},
+		{
+			"Name": "Stream Button 1",
+			"UUID": "com.saltcannon5k.holo-deck.stream-button-1",
+			"Icon": "imgs/actions/counter/icon",
+			"Tooltip": "wip",
+			"Controllers": [
+				"Keypad"
+			],
+			"VisibleInActionsList": false,
+			"States": [
+				{
+					"Image": "imgs/actions/counter/key",
+					"TitleAlignment": "middle"
+				}
+			]
+		},
+		{
+			"Name": "Stream Button 2",
+			"UUID": "com.saltcannon5k.holo-deck.stream-button-2",
+			"Icon": "imgs/actions/counter/icon",
+			"Tooltip": "wip",
+			"Controllers": [
+				"Keypad"
+			],
+			"VisibleInActionsList": false,
+			"States": [
+				{
+					"Image": "imgs/actions/counter/key",
+					"TitleAlignment": "middle"
+				}
+			]
+		},
+		{
+			"Name": "Stream Button 3",
+			"UUID": "com.saltcannon5k.holo-deck.stream-button-3",
+			"Icon": "imgs/actions/counter/icon",
+			"Tooltip": "wip",
+			"Controllers": [
+				"Keypad"
+			],
+			"VisibleInActionsList": false,
+			"States": [
+				{
+					"Image": "imgs/actions/counter/key",
+					"TitleAlignment": "middle"
+				}
+			]
+		},
+		{
+			"Name": "Stream Button 4",
+			"UUID": "com.saltcannon5k.holo-deck.stream-button-4",
+			"Icon": "imgs/actions/counter/icon",
+			"Tooltip": "wip",
+			"Controllers": [
+				"Keypad"
+			],
+			"VisibleInActionsList": false,
+			"States": [
+				{
+					"Image": "imgs/actions/counter/key",
+					"TitleAlignment": "middle"
+				}
+			]
+		},
+		{
+			"Name": "Stream Button 5",
+			"UUID": "com.saltcannon5k.holo-deck.stream-button-5",
+			"Icon": "imgs/actions/counter/icon",
+			"Tooltip": "wip",
+			"Controllers": [
+				"Keypad"
+			],
+			"VisibleInActionsList": false,
+			"States": [
+				{
+					"Image": "imgs/actions/counter/key",
+					"TitleAlignment": "middle"
+				}
+			]
+		},
+		{
+			"Name": "Stream Button 6",
+			"UUID": "com.saltcannon5k.holo-deck.stream-button-6",
+			"Icon": "imgs/actions/counter/icon",
+			"Tooltip": "wip",
+			"Controllers": [
+				"Keypad"
+			],
+			"VisibleInActionsList": false,
+			"States": [
+				{
+					"Image": "imgs/actions/counter/key",
+					"TitleAlignment": "middle"
+				}
+			]
+		},
+		{
+			"Name": "Stream Button 7",
+			"UUID": "com.saltcannon5k.holo-deck.stream-button-7",
+			"Icon": "imgs/actions/counter/icon",
+			"Tooltip": "wip",
+			"Controllers": [
+				"Keypad"
+			],
+			"VisibleInActionsList": false,
+			"States": [
+				{
+					"Image": "imgs/actions/counter/key",
+					"TitleAlignment": "middle"
+				}
+			]
+		},
+		{
+			"Name": "Stream Button 8",
+			"UUID": "com.saltcannon5k.holo-deck.stream-button-8",
+			"Icon": "imgs/actions/counter/icon",
+			"Tooltip": "wip",
+			"Controllers": [
+				"Keypad"
+			],
+			"VisibleInActionsList": false,
+			"States": [
+				{
+					"Image": "imgs/actions/counter/key",
+					"TitleAlignment": "middle"
+				}
+			]
+		},
+		{
+			"Name": "Stream Button 9",
+			"UUID": "com.saltcannon5k.holo-deck.stream-button-9",
+			"Icon": "imgs/actions/counter/icon",
+			"Tooltip": "wip",
+			"Controllers": [
+				"Keypad"
+			],
+			"VisibleInActionsList": false,
+			"States": [
+				{
+					"Image": "imgs/actions/counter/key",
+					"TitleAlignment": "middle"
+				}
+			]
+		}
+	],
+	"Category": "Holo Deck",
+	"CategoryIcon": "imgs/plugin/category-icon",
+	"CodePath": "bin/plugin.js",
+	"Description": "All live holo-streams at your fingertips",
+	"Icon": "imgs/plugin/marketplace",
+	"SDKVersion": 2,
+	"Software": {
+		"MinimumVersion": "6.4"
+	},
+	"OS": [
+		{
+			"Platform": "mac",
+			"MinimumVersion": "10.15"
+		},
+		{
+			"Platform": "windows",
+			"MinimumVersion": "10"
+		}
+	],
+	"Nodejs": {
+		"Version": "20",
+		"Debug": "enabled"
+	},
+	"UUID": "com.saltcannon5k.holo-deck",
+	"Profiles": [
+		{
+			"Name": "holo-folder-profile",
+			"DeviceType": 0,
+			"Readonly": true,
+			"DontAutoSwitchWhenInstalled": true
+		}
+	]
 }
