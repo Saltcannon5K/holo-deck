@@ -5,15 +5,18 @@ import { processStreamerImage } from "./process-streamer-image";
 export async function readStreamDataFromJson(pos: number) {
     try {
         const streamData = fs.readFileSync(`./holodex-data.json`, "utf-8");
-
         const parsedStreamData = JSON.parse(streamData);
 
+        const singleStreamData = parsedStreamData[pos] ?? {
+            id: "",
+            channel: { photo: "" },
+        };
         const {
             id,
             channel: { photo },
-        } = parsedStreamData[pos];
+        } = singleStreamData;
 
-        const processedPhoto = await processStreamerImage(photo);
+        const processedPhoto = photo ? await processStreamerImage(photo) : "";
 
         return { processedPhoto, id };
     } catch {
