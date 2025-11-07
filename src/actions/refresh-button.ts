@@ -19,8 +19,6 @@ export class RefreshButton extends SingletonAction<JsonObject> {
             await fetchLiveStreams(true);
 
             streamDeck.logger.info("Interval refresh triggered");
-
-            streamDeck.profiles.switchToProfile(ev.action.device.id, undefined);
         }, 5 * 60 * 1000); // 5 minutes
 
         return ev.action.setTitle("REFRESH");

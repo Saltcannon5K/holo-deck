@@ -3,25 +3,34 @@ import streamDeck, {
     KeyDownEvent,
     SingletonAction,
     WillAppearEvent,
+    WillDisappearEvent,
 } from "@elgato/streamdeck";
-import { readStreamDataFromJson } from "../holodex-api/read-stream-data-from-json";
+import fs from "fs";
+import { updateStreamButtonData } from "../utils/update-stream-button-data";
 
 @action({ UUID: "com.saltcannon5k.holo-deck.stream-button-0" })
 export class StreamButton0 extends SingletonAction<StreamSettings> {
+    private buttonNumber: number = 0;
+    private jsonWatcher: fs.FSWatcher | null = null;
+
     override async onWillAppear(
         ev: WillAppearEvent<StreamSettings>
     ): Promise<void> {
-        const { page } = await streamDeck.settings.getGlobalSettings();
+        const actionIntance = ev.action;
+        updateStreamButtonData(actionIntance, this.buttonNumber);
 
-        const index = 0 + (Number(page) - 1) * 10;
-
-        const streamData = await readStreamDataFromJson(index);
-
-        const id = streamData?.id ?? null;
-
-        ev.action.setSettings({ id: id ?? null });
-
-        ev.action.setImage(streamData?.processedPhoto ?? "");
+        if (!this.jsonWatcher) {
+            this.jsonWatcher = fs.watch(`./holodex-data.json`, (eventType) => {
+                if (eventType === "change") {
+                    setTimeout(() => {
+                        updateStreamButtonData(
+                            actionIntance,
+                            this.buttonNumber
+                        );
+                    });
+                }
+            });
+        }
     }
 
     override onKeyDown(ev: KeyDownEvent<StreamSettings>): void {
@@ -29,6 +38,15 @@ export class StreamButton0 extends SingletonAction<StreamSettings> {
 
         if (id) {
             streamDeck.system.openUrl(`https://www.youtube.com/watch?v=${id}`);
+        }
+    }
+
+    override onWillDisappear(
+        ev: WillDisappearEvent<StreamSettings>
+    ): Promise<void> | void {
+        if (this.jsonWatcher) {
+            this.jsonWatcher.close();
+            this.jsonWatcher = null;
         }
     }
 }
