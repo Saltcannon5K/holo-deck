@@ -3,18 +3,19 @@ import * as dotenv from "dotenv";
 import { HoloFolder } from "./actions/holo-folder";
 import { BackButton } from "./actions/back-button";
 import { RefreshButton } from "./actions/refresh-button";
-import { StreamButton0 } from "./actions/stream-button-0";
-import { StreamButton1 } from "./actions/stream-button-1";
-import { StreamButton2 } from "./actions/stream-button-2";
-import { StreamButton3 } from "./actions/stream-button-3";
-import { StreamButton4 } from "./actions/stream-button-4";
-import { StreamButton5 } from "./actions/stream-button-5";
-import { StreamButton6 } from "./actions/stream-button-6";
-import { StreamButton7 } from "./actions/stream-button-7";
-import { StreamButton8 } from "./actions/stream-button-8";
-import { StreamButton9 } from "./actions/stream-button-9";
-import { PageUpButton } from "./actions/page-up-button";
-import { PageDownButton } from "./actions/page-down-button";
+import {
+    StreamButton0,
+    StreamButton1,
+    StreamButton2,
+    StreamButton3,
+    StreamButton4,
+    StreamButton5,
+    StreamButton6,
+    StreamButton7,
+    StreamButton8,
+    StreamButton9,
+} from "./actions/stream-buttons";
+import { PageDownButton, PageUpButton } from "./actions/pagination-buttons";
 import { PageIndicator } from "./actions/page-indicator";
 
 dotenv.config();

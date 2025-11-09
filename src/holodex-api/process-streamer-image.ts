@@ -2,7 +2,7 @@ import streamDeck from "@elgato/streamdeck";
 import axios from "axios";
 import { Jimp } from "jimp";
 
-export async function processStreamerImage(imgUrl: string) {
+export async function processStreamerImage(imgUrl: string, status: string) {
     try {
         const response = await axios.get(imgUrl, {
             responseType: "arraybuffer",
@@ -11,6 +11,8 @@ export async function processStreamerImage(imgUrl: string) {
         const imgBuffer = Buffer.from(response.data);
 
         const image = await Jimp.read(imgBuffer);
+
+        if (status === "upcoming") image.greyscale();
 
         image.resize({ w: 72, h: 72 });
 
