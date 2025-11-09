@@ -7,74 +7,36 @@ import streamDeck, {
 } from "@elgato/streamdeck";
 import { fetchLiveStreams } from "../holodex-api/fetch-live-streams";
 import fs from "fs";
+import { DataEvents } from "../utils/events-bus";
+
+type FolderSettings = {
+    holodexApiKey?: string;
+    nimiMode?: boolean;
+    baseSearch?: string;
+};
 
 @action({ UUID: "com.saltcannon5k.holo-deck.holo-folder" })
 export class HoloFolder extends SingletonAction<JsonObject> {
     override async onWillAppear(
         ev: WillAppearEvent<JsonObject>
     ): Promise<void> {
-        const {
-            isRefresh,
-            page,
-            wasPageUp,
-            wasPageDown,
-            streamTotal,
-            isApiError,
-        } = await streamDeck.settings.getGlobalSettings();
-
-        if (isRefresh) {
-            streamDeck.settings.setGlobalSettings({
-                isRefresh: false,
-                page: 1,
-                streamTotal,
-                isApiError,
-            });
-
-            return streamDeck.profiles.switchToProfile(
-                ev.action.device.id,
-                "holo-folder-profile"
-            );
-        }
-
-        if (wasPageDown) {
-            streamDeck.settings.setGlobalSettings({
-                page,
-                streamTotal,
-            });
-            streamDeck.profiles.switchToProfile(
-                ev.action.device.id,
-                "holo-folder-profile"
-            );
-            return;
-        }
-
-        if (wasPageUp) {
-            streamDeck.settings.setGlobalSettings({
-                page,
-                streamTotal,
-            });
-            streamDeck.profiles.switchToProfile(
-                ev.action.device.id,
-                "holo-folder-profile"
-            );
-            return;
-        }
+        DataEvents.removeAllListeners("dataRefresh");
 
         return ev.action.setTitle(`Holo Deck`);
     }
 
     override async onKeyDown(ev: KeyDownEvent<FolderSettings>): Promise<void> {
         const holodexApiKey = ev.payload.settings.holodexApiKey ?? "";
+        const nimiMode = ev.payload.settings.nimiMode ?? false;
+        const baseSearch = ev.payload.settings.baseSearch ?? "all";
 
         fs.writeFileSync(
-            `./holodex-api-key.json`,
-            JSON.stringify({ holodexApiKey }),
+            `./ui-settings.json`,
+            JSON.stringify({ holodexApiKey, nimiMode, baseSearch }),
             "utf-8"
         );
 
-        await fetchLiveStreams();
-
-        //streamDeck.settings.setGlobalSettings({ page: 1 });
+        await fetchLiveStreams(true);
 
         streamDeck.profiles.switchToProfile(
             ev.action.device.id,
@@ -82,7 +44,3 @@ export class HoloFolder extends SingletonAction<JsonObject> {
         );
     }
 }
-
-type FolderSettings = {
-    holodexApiKey?: string;
-};

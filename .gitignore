@@ -7,5 +7,5 @@ node_modules/
 
 .env
 holodex-data.json
-holodex-api-key.json
+ui-settings.json
 com.saltcannon5k.holo-deck.streamDeckPlugin

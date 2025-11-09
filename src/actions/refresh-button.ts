@@ -16,12 +16,9 @@ export class RefreshButton extends SingletonAction<JsonObject> {
         ev: WillAppearEvent<JsonObject>
     ): Promise<void> | void {
         this.timer = setInterval(async () => {
-            await fetchLiveStreams(true);
-
             streamDeck.logger.info("Interval refresh triggered");
-
-            streamDeck.profiles.switchToProfile(ev.action.device.id, undefined);
-        }, 5 * 60 * 1000); // 5 minutes
+            await fetchLiveStreams();
+        }, 5 * 60 * 1000); // 5 minute(s)
 
         return ev.action.setTitle("REFRESH");
     }
@@ -31,14 +28,11 @@ export class RefreshButton extends SingletonAction<JsonObject> {
     ): Promise<void> | void {
         if (this.timer) {
             clearInterval(this.timer);
-
             this.timer = null;
         }
     }
 
     override async onKeyDown(ev: KeyDownEvent<JsonObject>): Promise<void> {
         await fetchLiveStreams(true);
-
-        streamDeck.profiles.switchToProfile(ev.action.device.id, undefined);
     }
 }

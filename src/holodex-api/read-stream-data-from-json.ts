@@ -10,13 +10,17 @@ export async function readStreamDataFromJson(pos: number) {
         const singleStreamData = parsedStreamData[pos] ?? {
             id: "",
             channel: { photo: "" },
+            status: "",
         };
         const {
             id,
             channel: { photo },
+            status,
         } = singleStreamData;
 
-        const processedPhoto = photo ? await processStreamerImage(photo) : "";
+        const processedPhoto = photo
+            ? await processStreamerImage(photo, status)
+            : "";
 
         return { processedPhoto, id };
     } catch {
