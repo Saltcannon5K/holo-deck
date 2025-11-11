@@ -49,11 +49,18 @@ export async function fetchLiveStreams(
 
             const nimiData = nimiResponse.data;
 
-            holoFilteredData = holoFilteredData
-                .concat(nimiData)
-                .sort((a: any, b: any) => {
-                    a["available_at"] < b["available_at"];
-                });
+            holoFilteredData = holoFilteredData.concat(nimiData);
+            holoFilteredData.sort(
+                (
+                    a: { available_at?: string | null },
+                    b: { available_at?: string | null }
+                ) => {
+                    return (
+                        new Date(b.available_at ?? 0).getTime() -
+                        new Date(a.available_at ?? 0).getTime()
+                    );
+                }
+            );
         }
 
         streamDeck.settings.setGlobalSettings({
